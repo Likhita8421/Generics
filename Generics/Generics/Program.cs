@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Generics
 {
@@ -10,31 +11,15 @@ namespace Generics
             double[] doubleArray = { 1.1, 2.2, 3.3, 4.4, 5.5 };
             char[] charArray = { 'L', 'E', 'E', 'N', 'U' };
 
-            program.toprint(intArray);
-            program.toprint(doubleArray);
-            program.toprint(charArray);
 
+            program.toPrint<int>(intArray);
+            program.toPrint<double>(doubleArray);
+            program.toPrint<char>(charArray);
         }
 
-        public static void toprint(double[] inputArry)
+        public static void toPrint<T>(T[] inputArry)
         {
-            foreach (double element in inputArry)
-            {
-                Console.WriteLine(element);
-            }
-            Console.WriteLine("----------------------");
-        }
-        public static void toprint(char[] inputArry)
-        {
-            foreach (char element in inputArry)
-            {
-                Console.WriteLine(element);
-            }
-            Console.WriteLine("----------------------");
-        }
-        public static void toprint(int[] inputArry)
-        {
-            foreach (int element in inputArry)
+            foreach (var element in inputArry)
             {
                 Console.WriteLine(element);
             }
