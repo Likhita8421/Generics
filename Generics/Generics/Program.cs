@@ -6,11 +6,11 @@ namespace Generics
     {
         public static void Main(string[] args)
         {
-            //int[] intArry = { 1, 2, 3, 4, 5, 6 };
+            int[] intArray = { 1, 2, 3, 4, 5, 6 };
             double[] doubleArray = { 1.1, 2.2, 3.3, 4.4, 5.5 };
             char[] charArray = { 'L', 'E', 'E', 'N', 'U' };
 
-            //program.toprint(intArray);
+            program.toprint(intArray);
             program.toprint(doubleArray);
             program.toprint(charArray);
 
@@ -27,6 +27,14 @@ namespace Generics
         public static void toprint(char[] inputArry)
         {
             foreach (char element in inputArry)
+            {
+                Console.WriteLine(element);
+            }
+            Console.WriteLine("----------------------");
+        }
+        public static void toprint(int[] inputArry)
+        {
+            foreach (int element in inputArry)
             {
                 Console.WriteLine(element);
             }
